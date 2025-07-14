@@ -132,12 +132,41 @@ ul {
 
 }
 
-
-
 .modal_window { 
+    width: 100%;
+    height: 80%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+}
+.model_window_style{ 
     width: 200px;
     height: 300px;
     border: 2px solid black;
-    background-color: gray;
-    color: #fff;   
+    background-color: var(--bw);
+    font-family: var(--fonts);
+}
+.model_window_row { 
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+}
+#status_game > p { 
+    color: var(--gr_s);
+    font-weight: bold;
+    font-family: var(--fonts);
+    font-size: 40px;
+}
+#restart_game { 
+    border: none;
+    font-size: 30px;
+    font-family: var(--fonts);
+    background-color: transparent;
+    text-transform: uppercase;
 }
