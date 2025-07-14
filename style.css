@@ -60,19 +60,51 @@ ul {
     width: 100%;
     position: fixed;
     bottom: 1px;
+    padding: 1rem 0;
 }
 .footer_row  {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+    font-size: 20px;
 }
 .footer_row > a { 
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 2rem;
     text-decoration: none;
     text-transform: uppercase;
+    color: black;
+
 }
 .footer_row > a > img { 
-    width: 50px;
+    width: 30px;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.footer_row > a > img:hover { 
+    width: 30px;
+    transform: scale(-1, 1);
+        transition: all 0.3s;
+
+}
+#paper,#rock,#scissors { 
+    transition: all 0.4s;
+}
+ #paper:hover { 
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+
+#rock:hover { 
+    transform: scale(1.3);
+    transition: all 0.3s;
+
+}
+
+#scissors:hover { 
+    transform: scale(1.3);
+    transition: all 0.3s;
+
 }
