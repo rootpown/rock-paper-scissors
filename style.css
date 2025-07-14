@@ -13,7 +13,8 @@ ul {
     --fonts : "Nunito", sans-serif;
 }
 .container  {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .header { 
@@ -54,4 +55,24 @@ ul {
 .main_body_choice-obj > li >img { 
     width: 150px;
     height: 150px;
+}
+.main_footer{ 
+    width: 100%;
+    position: fixed;
+    bottom: 1px;
+}
+.footer_row  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_row > a { 
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.footer_row > a > img { 
+    width: 50px;
 }
