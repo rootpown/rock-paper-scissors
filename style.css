@@ -15,6 +15,8 @@ ul {
 .container  {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 .header { 
@@ -22,6 +24,11 @@ ul {
     font-family: var(--fonts);
     text-align: center;
     padding: 1rem 0;
+}
+.main { 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .main_section_header { 
     display: flex;
@@ -33,8 +40,17 @@ ul {
     color: red;
 }
 .main_body_choice { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
 }
+.main_body_choice-row { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main_header_title { 
     text-align: center;
     text-transform: uppercase;
@@ -58,9 +74,11 @@ ul {
 }
 .main_footer{ 
     width: 100%;
-    position: fixed;
-    bottom: 1px;
     padding: 1rem 0;
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
 }
 .footer_row  {
     display: flex;
