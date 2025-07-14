@@ -3,7 +3,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-   
+}
+.container { 
+    background-color: var(--bg);
 }
 
 ul { 
@@ -16,6 +18,8 @@ ul {
     --wh_g: #e8e8e8;
     --wh_s: #c0c0c0;
     --bw: #434343;
+    --bg: #f1f6f9;
+    --bg_modal: #3e4e59;
 }
 .container  {
     display: flex;
@@ -28,6 +32,8 @@ ul {
     text-transform: uppercase;
     font-family: var(--fonts);
     text-align: center;
+    font-weight: 900;
+    font-size: 40px;
     padding: 1rem 0;
 }
 .main { 
@@ -38,24 +44,45 @@ ul {
 .main_section_header { 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10vw;
+
 }
 .block{ 
     display: flex;
-    color: red;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: var(--fonts);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem 0;
+    gap: 1rem;
+
 }
+
 .main_body_choice { 
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    padding: 2rem 0;
 }
+#countPlayer, #countCPU { 
+    border: 2px solid black;
+    padding: 5px;
+}
+
 .main_body_choice-row { 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
-
+.main_body_choice-row > h2 { 
+    margin-bottom: 50px;
+    font-size: 40px;
+}
 .main_header_title { 
     text-align: center;
     text-transform: uppercase;
@@ -139,6 +166,7 @@ ul {
     align-items: center;
     justify-content: center;
     position: fixed;
+    visibility: hidden;
 
 }
 .model_window_style{ 
@@ -149,7 +177,7 @@ ul {
     font-family: var(--fonts);
 }
 .model_window_row { 
-    background-color: red;
+    background-color: var(--bg_modal);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,14 +187,16 @@ ul {
 }
 #status_game > p { 
     color: var(--gr_s);
-    font-weight: bold;
+    font-weight: 900;
     font-family: var(--fonts);
     font-size: 40px;
 }
 #restart_game { 
     border: none;
     font-size: 30px;
+    font-weight: 900;
     font-family: var(--fonts);
     background-color: transparent;
     text-transform: uppercase;
+    color: var(--wh_g);
 }
