@@ -16,6 +16,7 @@
                         <div class="model_window_row">
                             <div id="status_game">
                               <!-- content info <= DOM -->
+                               <p>You Win!</p>
                             </div>
                             <button id="restart_game">Restart</button>
                          </div>
@@ -26,12 +27,11 @@
                     <!-- сpu player -->
                     <div class="main_header_block-left">
                     <h2 class="main_header_title">Player</h2>
-                        <div id="block_modelPlayer">
-                            lorem
+                        <div id="block_modelPlayer" style="overflow: hidden;">
                         </div>
                         <div class="block">
                             <p>count: </p>
-                            <p id="countPlayer"></p>
+                            <p id="countPlayer">0</p>
                         </div>
                     </div>
                     <div class="main_header_block-right">
@@ -39,13 +39,14 @@
                         <div id="block_modelCPU"></div>
                         <div class="block">
                             <p>count: </p>
-                            <p id="countCPU"> </p>
+                            <p id="countCPU">0</p>
                         </div>
                     </div>
                 </section>
                 <!-- body -->
                 <section class="main_body_choice">
                         <div class="main_body_choice-row">
+                            <h2>CHOISE</h2>
                                 <ul class="main_body_choice-obj">
                                     <li id="paper"><img src="imgs/280-2802166_rock-paper-scissors-clipart-png-download.png" alt=""></li>
                                     <li id="rock"><img src="imgs/502-5025794_rock-paper-scissors-clipart-hd-png-download-Photoroom.png" alt=""></li>
