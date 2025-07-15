@@ -1,12 +1,12 @@
-// модель.окно
+
+
 const modelWindow = document.getElementById("modal_window");
 const getStatusGame = document.getElementById('status_game')
 const restartGame = document.getElementById('restart_game')
 
-// блоки игроков.
 const modelPlayer = document.getElementById('block_modelPlayer');
 const modelComputer = document.getElementById('block_modelComputer');
-// счет игроков
+
 const countPlayer = document.getElementById('countPlayer');
 const countComputer = document.getElementById("countComputer")
 
@@ -36,7 +36,6 @@ scissors.addEventListener("click", handleClick('SCISSORS'))
 function handleClick(playerChoice) { 
     let computerChoice = getChoiceCPU();
     updateChoice(playerChoice, computerChoice)
-    // playerStation left -= comptuer
 }
 function updateChoice(playerChoice, computerChoice) {
     if(playerChoice === 'ROCK') {
