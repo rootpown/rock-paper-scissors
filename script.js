@@ -18,7 +18,7 @@ let humanScore = 0
 let computerScore = 0
 let models = document.createElement('div')
 
-function getChoiceCPU() {
+function getChoiceComputer() {
     let randomChoice = Math.ceil(Math.random() * 3);
     if ( randomChoice === 1) {
         return 'ROCK';
@@ -34,7 +34,7 @@ paper.addEventListener("click", handleClick('PAPER'))
 scissors.addEventListener("click", handleClick('SCISSORS'))
 
 function handleClick(playerChoice) { 
-    let computerChoice = getChoiceCPU();
+    const computerChoice = getChoiceComputer;
     updateChoice(playerChoice, computerChoice)
 }
 function updateChoice(playerChoice, computerChoice) {
