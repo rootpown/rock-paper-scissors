@@ -12,12 +12,11 @@ const countComputer = document.getElementById("countComputer")
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
+
+const playerModels = document.createElement('div')
+const computerModels = document.createElement('div')
 let humanScore = 0
 let computerScore = 0
-
-let playerModels = document.createElement('div')
-let computerModels = document.createElement('div')
-
 
 function getChoiceComputer() {
     let words = ['ROCK', 'PAPER', 'SCISSORS']
@@ -31,7 +30,7 @@ function handleClick(playerChoice) {
     const computerChoice = getChoiceComputer();
     updateChoice(playerChoice, computerChoice)
     getCounter(playerChoice, computerChoice)
-    
+
 }
 function updateChoice(playerChoice, computerChoice) {
     if(playerChoice === 'ROCK') {
@@ -56,18 +55,29 @@ function updateChoice(playerChoice, computerChoice) {
     }
 }
 
-
 function getCounter(playerChoice, computerChoice) {    
     if( playerChoice === 'PAPER' && computerChoice === "SCISSORS" ||
         playerChoice === 'SCISSORS' && computerChoice === 'ROCK' || 
         playerChoice === "ROCK" && computerChoice === 'PAPER'
     ) { 
-        console.log('Победа', humanScore += 1);
+        humanScore += 1
+        countPlayer.textContent = humanScore;
+        
     } else if(playerChoice === computerChoice) { 
         console.log('Ничья');
     } else { 
-        console.log('Проигрыш', humanScore--);
-        
+        computerScore += 1;
+        countComputer.textContent = computerScore;
     }
-    
+    if(humanScore === 2 && computerScore === 2) { 
+            resetGames()
+    }
+}
+function resetGames() { 
+    modelPlayer.innerHTML = ''
+    modelComputer.innerHTML = ''
+    humanScore = 0;
+    computerScore = 0;
+    countPlayer.textContent = '';
+    countComputer.textContent = '';
 }
