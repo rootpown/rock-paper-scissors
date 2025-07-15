@@ -18,14 +18,7 @@ const countCPU = document.getElementById("countCPU")
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
-// paper.addEventListener('click', () => {
-//     let models = document.createElement('div')
-//     models.id = 'elems'
-//     modelPlayer.append(models)
-// })
-//  Рандомный выбор CPU 
-//  ВЫбор Player
-//  Сравнение.
+
 function getChoiceCPU() {
     let models = document.createElement('div')
     let randomChoice = Math.ceil(Math.random() * 3)
@@ -45,5 +38,19 @@ function getChoiceCPU() {
         return undefined
     }
 }
-function getGameData() { 
+function getChoicePlayer(choiseCPU) { 
+    let models = document.createElement('div')
+    paper.addEventListener('click', () => { 
+    models.id = 'block_paper'
+    modelPlayer.append(models)
+    })
+    rock.addEventListener('click', () => { 
+    models.id = 'block_rock'
+    modelPlayer.append(models) 
+    })
+    scissors.addEventListener('click', () => { 
+    models.id = 'block_scissors'
+    modelPlayer.append(models) 
+    })
 } 
+
