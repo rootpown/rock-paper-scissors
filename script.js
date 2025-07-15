@@ -10,11 +10,6 @@ const modelCPU = document.getElementById('block_modelCPU');
 const countPlayer = document.getElementById('countPlayer');
 const countCPU = document.getElementById("countCPU")
 
-// выбор карты => отображение
-// const resultModel = getElementById('elems');
-
-// выбор блока
-
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
@@ -43,14 +38,19 @@ function getChoicePlayer(choiseCPU) {
     paper.addEventListener('click', () => { 
     models.id = 'block_paper'
     modelPlayer.append(models)
+    return 'PAPER';
     })
     rock.addEventListener('click', () => { 
     models.id = 'block_rock'
     modelPlayer.append(models) 
+    return 'ROCK'
     })
     scissors.addEventListener('click', () => { 
     models.id = 'block_scissors'
     modelPlayer.append(models) 
+    return 'SCISSORS'
     })
 } 
+function getChoiceGame(player, choiseCPU) { 
 
+}
