@@ -12,45 +12,44 @@ const countCPU = document.getElementById("countCPU")
 
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
+
 const scissors = document.getElementById('scissors');
 
+let humanScore = 0
+let computerScore = 0
+let models = document.createElement('div')
+
 function getChoiceCPU() {
-    let models = document.createElement('div')
-    let randomChoice = Math.ceil(Math.random() * 3)
+    let randomChoice = Math.ceil(Math.random() * 3);
     if ( randomChoice === 1) {
-        models.id = 'block_rock';
-        modelCPU.append(models);
         return 'ROCK';
     } else if ( randomChoice === 2) { 
-        models.id = 'block_paper';
-        modelCPU.append(models);
         return 'PAPER';
     } else if ( randomChoice === 3) { 
-        models.id = 'block_scissors';
-        modelCPU.append(models);
         return 'SCISSORS';
-    } else { 
-        return undefined
     }
 }
-function getChoicePlayer(choiseCPU) { 
-    let models = document.createElement('div')
-    paper.addEventListener('click', () => { 
-    models.id = 'block_paper';
-    modelPlayer.append(models);
-    return 'PAPER';
-    })
-    rock.addEventListener('click', () => { 
-    models.id = 'block_rock';
-    modelPlayer.append(models);
-    return 'ROCK';
-    })
-    scissors.addEventListener('click', () => { 
-    models.id = 'block_scissors';
-    modelPlayer.append(models);
-    return 'SCISSORS';
-    })
-} 
-function getChoiceGame(player, choiseCPU) { 
 
+rock.addEventListener("click", handleClick('ROCK'))
+paper.addEventListener("click", handleClick('PAPER'))
+scissors.addEventListener("click", handleClick('SCISSORS'))
+
+function handleClick(playerChoice) { 
+    let computerChoice = getChoiceCPU();
+    // playerStation left -= comptuer
 }
+function updateChoice(playerChoice, computerChoice) {
+    if(playerChoice === 'ROCK') {
+        models.id = 'block_rock';
+    }
+}
+//  varriable CPU = var => func()
+// function getChoiceGame(playerSelect, computerSelect) {
+//     if(playerSelect === "ROCK" && computerSelect === 'SCISSORS')  { 
+//         console.log(123);
+//     }
+  
+// }
+
+
+
