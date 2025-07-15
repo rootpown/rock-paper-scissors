@@ -206,6 +206,7 @@ ul {
     background-repeat: no-repeat;
     width: 200px;
     height: 400px;
+    margin-top: 20px;
 }
 #block_paper { 
     background-image: url("imgs/280-2802166_rock-paper-scissors-clipart-png-download.png");
