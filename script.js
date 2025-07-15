@@ -5,10 +5,10 @@ const restartGame = document.getElementById('restart_game')
 
 // блоки игроков.
 const modelPlayer = document.getElementById('block_modelPlayer');
-const modelCPU = document.getElementById('block_modelCPU');
+const modelComputer = document.getElementById('block_modelComputer');
 // счет игроков
 const countPlayer = document.getElementById('countPlayer');
-const countCPU = document.getElementById("countCPU")
+const countComputer = document.getElementById("countComputer")
 
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
@@ -50,13 +50,13 @@ function updateChoice(playerChoice, computerChoice) {
     }
     if (computerChoice === 'ROCK') { 
         models.id = 'block_rock';
-        modelCPU.appendChild(models);
+        modelComputer.appendChild(models);
     } else if (computerChoice === "PAPER")  {
         models.id = 'block_paper'
-        modelCPU.appendChild(models)
+        modelComputer.appendChild(models)
     } else if ( computerChoice === "SCISSORS") { 
         models.id = 'block.scissors';
-        modelCPU.appendChild(models);
+        modelComputer.appendChild(models);
     }
 }
 //  varriable CPU = var => func()
