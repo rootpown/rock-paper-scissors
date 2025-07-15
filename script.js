@@ -1,5 +1,4 @@
 
-
 const modelWindow = document.getElementById("modal_window");
 const getStatusGame = document.getElementById('status_game')
 const restartGame = document.getElementById('restart_game')
@@ -24,7 +23,6 @@ function getChoiceComputer() {
     let words = ['ROCK', 'PAPER', 'SCISSORS']
     return words[Math.floor(Math.random() * words.length)];
 }
-getChoiceComputer()
 rock.addEventListener("click", () => handleClick('ROCK'))
 paper.addEventListener("click", () => handleClick('PAPER'))
 scissors.addEventListener("click", () => handleClick('SCISSORS'))
@@ -32,12 +30,10 @@ scissors.addEventListener("click", () => handleClick('SCISSORS'))
 function handleClick(playerChoice) { 
     const computerChoice = getChoiceComputer();
     updateChoice(playerChoice, computerChoice)
-    console.log(playerChoice, computerChoice);
+    getCounter(playerChoice, computerChoice)
     
 }
 function updateChoice(playerChoice, computerChoice) {
-
-
     if(playerChoice === 'ROCK') {
         playerModels.id = 'block_rock';
         modelPlayer.append(playerModels) 
@@ -61,3 +57,17 @@ function updateChoice(playerChoice, computerChoice) {
 }
 
 
+function getCounter(playerChoice, computerChoice) {    
+    if( playerChoice === 'PAPER' && computerChoice === "SCISSORS" ||
+        playerChoice === 'SCISSORS' && computerChoice === 'ROCK' || 
+        playerChoice === "ROCK" && computerChoice === 'PAPER'
+    ) { 
+        console.log('Победа', humanScore += 1);
+    } else if(playerChoice === computerChoice) { 
+        console.log('Ничья');
+    } else { 
+        console.log('Проигрыш', humanScore--);
+        
+    }
+    
+}
