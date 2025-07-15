@@ -68,7 +68,7 @@ ul {
     border: 1px solid black;
     padding: 2rem 0;
 }
-#countPlayer, #countCPU { 
+#countPlayer, #countComputer { 
     border: 2px solid black;
     padding: 5px;
 }
@@ -89,7 +89,7 @@ ul {
     font-family: var(--fonts);
     font-size: 33px;
 }
-#block_modelPlayer,#block_modelCPU {
+#block_modelPlayer,#block_modelComputer {
     border: 2px solid black;
     width: 200px;
     height: 200px;
