@@ -13,50 +13,50 @@ const countComputer = document.getElementById("countComputer")
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
-
 let humanScore = 0
 let computerScore = 0
-let models = document.createElement('div')
+
+let playerModels = document.createElement('div')
+let computerModels = document.createElement('div')
+
 
 function getChoiceComputer() {
-    let randomChoice = Math.ceil(Math.random() * 3);
-    if ( randomChoice === 1) {
-        return 'ROCK';
-    } else if ( randomChoice === 2) { 
-        return 'PAPER';
-    } else if ( randomChoice === 3) { 
-        return 'SCISSORS';
-    }
+    let words = ['ROCK', 'PAPER', 'SCISSORS']
+    return words[Math.floor(Math.random() * words.length)];
 }
-
-rock.addEventListener("click", handleClick('ROCK'))
-paper.addEventListener("click", handleClick('PAPER'))
-scissors.addEventListener("click", handleClick('SCISSORS'))
+getChoiceComputer()
+rock.addEventListener("click", () => handleClick('ROCK'))
+paper.addEventListener("click", () => handleClick('PAPER'))
+scissors.addEventListener("click", () => handleClick('SCISSORS'))
 
 function handleClick(playerChoice) { 
-    const computerChoice = getChoiceComputer;
+    const computerChoice = getChoiceComputer();
     updateChoice(playerChoice, computerChoice)
+    console.log(playerChoice, computerChoice);
+    
 }
 function updateChoice(playerChoice, computerChoice) {
+
+
     if(playerChoice === 'ROCK') {
-        models.id = 'block_rock';
-        modelPlayer.appendChild(models);
+        playerModels.id = 'block_rock';
+        modelPlayer.append(playerModels) 
     } else if ( playerChoice === "PAPER") { 
-        models.id = 'block_paper';
-        modelPlayer.appendChild(models);
+        playerModels.id = 'block_paper';
+        modelPlayer.append(playerModels);
     } else if ( playerChoice === "SCISSORS") { 
-        models.id = 'block_scissors';
-        modelPlayer.appendChild(models)
+        playerModels.id = 'block_scissors';
+        modelPlayer.append(playerModels)
     }
     if (computerChoice === 'ROCK') { 
-        models.id = 'block_rock';
-        modelComputer.appendChild(models);
+        computerModels.id = 'block_rock';
+        modelComputer.append(computerModels);
     } else if (computerChoice === "PAPER")  {
-        models.id = 'block_paper'
-        modelComputer.appendChild(models)
+        computerModels.id = 'block_paper'
+        modelComputer.append(computerModels)
     } else if ( computerChoice === "SCISSORS") { 
-        models.id = 'block.scissors';
-        modelComputer.appendChild(models);
+        computerModels.id = 'block_scissors';
+        modelComputer.append(computerModels);
     }
 }
 
