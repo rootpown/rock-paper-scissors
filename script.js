@@ -35,6 +35,7 @@ scissors.addEventListener("click", handleClick('SCISSORS'))
 
 function handleClick(playerChoice) { 
     let computerChoice = getChoiceCPU();
+    updateChoice(playerChoice, computerChoice)
     // playerStation left -= comptuer
 }
 function updateChoice(playerChoice, computerChoice) {
@@ -59,13 +60,5 @@ function updateChoice(playerChoice, computerChoice) {
         modelComputer.appendChild(models);
     }
 }
-//  varriable CPU = var => func()
-// function getChoiceGame(playerSelect, computerSelect) {
-//     if(playerSelect === "ROCK" && computerSelect === 'SCISSORS')  { 
-//         console.log(123);
-//     }
-  
-// }
-
 
 
