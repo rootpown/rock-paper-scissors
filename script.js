@@ -23,17 +23,17 @@ function getChoiceCPU() {
     let models = document.createElement('div')
     let randomChoice = Math.ceil(Math.random() * 3)
     if ( randomChoice === 1) {
-            models.id = 'block_rock'
-            modelCPU.append(models)
-            return 'ROCK'
+        models.id = 'block_rock'
+        modelCPU.append(models)
+        return 'ROCK'
     } else if ( randomChoice === 2) { 
-            models.id = 'block_paper'
-            modelCPU.append(models)
-            return 'PAPER'
+        models.id = 'block_paper'
+        modelCPU.append(models)
+        return 'PAPER'
     } else if ( randomChoice === 3) { 
-            models.id = 'block_scissors'
-            modelCPU.append(models)
-            return 'SCISSORS'
+        models.id = 'block_scissors'
+        modelCPU.append(models)
+        return 'SCISSORS'
     } else { 
         return undefined
     }
