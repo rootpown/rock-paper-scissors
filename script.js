@@ -12,7 +12,6 @@ const countCPU = document.getElementById("countCPU")
 
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
-
 const scissors = document.getElementById('scissors');
 
 let humanScore = 0
@@ -41,6 +40,23 @@ function handleClick(playerChoice) {
 function updateChoice(playerChoice, computerChoice) {
     if(playerChoice === 'ROCK') {
         models.id = 'block_rock';
+        modelPlayer.appendChild(models);
+    } else if ( playerChoice === "PAPER") { 
+        models.id = 'block_paper';
+        modelPlayer.appendChild(models);
+    } else if ( playerChoice === "SCISSORS") { 
+        models.id = 'block_scissors';
+        modelPlayer.appendChild(models)
+    }
+    if (computerChoice === 'ROCK') { 
+        models.id = 'block_rock';
+        modelCPU.appendChild(models);
+    } else if (computerChoice === "PAPER")  {
+        models.id = 'block_paper'
+        modelCPU.appendChild(models)
+    } else if ( computerChoice === "SCISSORS") { 
+        models.id = 'block.scissors';
+        modelCPU.appendChild(models);
     }
 }
 //  varriable CPU = var => func()
