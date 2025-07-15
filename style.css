@@ -200,10 +200,24 @@ ul {
     text-transform: uppercase;
     color: var(--wh_g);
 }
-/*! #elems { 
+#block_rock { 
     background-image: url("imgs/502-5025794_rock-paper-scissors-clipart-hd-png-download-Photoroom.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 200px;
     height: 400px;
-} */
+}
+#block_paper { 
+    background-image: url("imgs/280-2802166_rock-paper-scissors-clipart-png-download.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 400px;
+}
+#block_scissors { 
+    background-image: url("imgs/rock-paper-scissors-rock-paper-scissors-clipart-1176494-Photoroom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 400px;
+}
