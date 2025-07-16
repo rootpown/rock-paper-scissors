@@ -66,7 +66,7 @@ ul {
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 #countPlayer, #countComputer { 
     border: 2px solid black;
@@ -226,8 +226,12 @@ ul {
     height: 400px;
 }
 #textResult { 
+    width: 100%;
+    font-family: var(--fonts);
     text-align: center;
     font-weight: 900;
-    padding: 2rem 0;
     font-size: 30px;
+    position: absolute;
+    top: 266px;
+    left: 9px;
 }
