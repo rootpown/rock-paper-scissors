@@ -30,7 +30,7 @@ function handleClick(playerChoice) {
     const computerChoice = getChoiceComputer();
     updateChoice(playerChoice, computerChoice)
     getCounter(playerChoice, computerChoice)
-
+    resetGames()
 }
 function updateChoice(playerChoice, computerChoice) {
     if(playerChoice === 'ROCK') {
@@ -62,22 +62,32 @@ function getCounter(playerChoice, computerChoice) {
     ) { 
         humanScore += 1
         countPlayer.textContent = humanScore;
-        
+        console.log(humanScore, 'comp');
+
     } else if(playerChoice === computerChoice) { 
         console.log('Ничья');
     } else { 
         computerScore += 1;
         countComputer.textContent = computerScore;
+        console.log(computerScore, 'comp');
+        
     }
-    if(humanScore === 2 && computerScore === 2) { 
-            resetGames()
-    }
+    
+  
+    // if(computerScore === 3) { 
+    //     resetGames()
+
+    // }
+
 }
 function resetGames() { 
+    if(humanScore === 3 || computerScore === 3) { 
+
     modelPlayer.innerHTML = ''
     modelComputer.innerHTML = ''
     humanScore = 0;
     computerScore = 0;
     countPlayer.textContent = '';
     countComputer.textContent = '';
+    }
 }
