@@ -12,7 +12,7 @@ const countComputer = document.getElementById("countComputer")
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
-
+const textResult = document.getElementById('textResult')
 const playerModels = document.createElement('div')
 const computerModels = document.createElement('div')
 let humanScore = 0
@@ -60,34 +60,29 @@ function getCounter(playerChoice, computerChoice) {
         playerChoice === 'SCISSORS' && computerChoice === 'ROCK' || 
         playerChoice === "ROCK" && computerChoice === 'PAPER'
     ) { 
-        humanScore += 1
+        humanScore++;
         countPlayer.textContent = humanScore;
+        textResult.textContent = ''
         console.log(humanScore, 'comp');
-
     } else if(playerChoice === computerChoice) { 
         console.log('Ничья');
+        textResult.textContent = 'DRAW'
     } else { 
-        computerScore += 1;
+        computerScore++;
         countComputer.textContent = computerScore;
+        textResult.textContent = ''
+
         console.log(computerScore, 'comp');
-        
     }
-    
-  
-    // if(computerScore === 3) { 
-    //     resetGames()
-
-    // }
-
 }
 function resetGames() { 
-    if(humanScore === 3 || computerScore === 3) { 
+    if(humanScore === 5 || computerScore === 5) { 
 
-    modelPlayer.innerHTML = ''
-    modelComputer.innerHTML = ''
     humanScore = 0;
     computerScore = 0;
     countPlayer.textContent = '';
     countComputer.textContent = '';
+    modelPlayer.innerHTML = ''
+    modelComputer.innerHTML = ''
     }
 }
