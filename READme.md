@@ -1,0 +1,1 @@
+# Mini game. Rock paper scissors to see the result [Live](https://rootpown.github.io/rock-paper-scissors/) <= click
