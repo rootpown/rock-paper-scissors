@@ -12,9 +12,14 @@ const countComputer = document.getElementById("countComputer")
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
+
+const modalWindow = document.getElementById('modal_window')
+const modalRestart = document.getElementById('restart_game')
+
 const textResult = document.getElementById('textResult')
 const playerModels = document.createElement('div')
 const computerModels = document.createElement('div')
+
 let humanScore = 0
 let computerScore = 0
 
@@ -30,7 +35,7 @@ function handleClick(playerChoice) {
     const computerChoice = getChoiceComputer();
     updateChoice(playerChoice, computerChoice)
     getCounter(playerChoice, computerChoice)
-    resetGames()
+    modalDisplay()
 }
 function updateChoice(playerChoice, computerChoice) {
     if(playerChoice === 'ROCK') {
@@ -54,7 +59,13 @@ function updateChoice(playerChoice, computerChoice) {
         modelComputer.append(computerModels);
     }
 }
-
+function modalDisplay() { 
+        if(humanScore === 5 || computerScore === 5) { 
+            modalWindow.style.visibility = 'visible'
+            modalRestart.addEventListener('click', () => resetGames())
+        }
+        
+}
 function getCounter(playerChoice, computerChoice) {    
     if( playerChoice === 'PAPER' && computerChoice === "SCISSORS" ||
         playerChoice === 'SCISSORS' && computerChoice === 'ROCK' || 
@@ -82,7 +93,7 @@ function getCounter(playerChoice, computerChoice) {
     }
 }
 function resetGames() { 
-    if(humanScore === 5 || computerScore === 5) { 
+    modalWindow.style.visibility = 'hidden'
 
     humanScore = 0;
     computerScore = 0;
@@ -90,5 +101,4 @@ function resetGames() {
     countComputer.textContent = '';
     modelPlayer.innerHTML = ''
     modelComputer.innerHTML = ''
-    }
 }
