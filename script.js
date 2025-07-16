@@ -1,21 +1,15 @@
-
 const modelWindow = document.getElementById("modal_window");
 const getStatusGame = document.getElementById('status_game')
 const restartGame = document.getElementById('restart_game')
-
 const modelPlayer = document.getElementById('block_modelPlayer');
 const modelComputer = document.getElementById('block_modelComputer');
-
 const countPlayer = document.getElementById('countPlayer');
 const countComputer = document.getElementById("countComputer")
-
 const paper = document.getElementById('paper');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
-
 const modalWindow = document.getElementById('modal_window')
 const modalRestart = document.getElementById('restart_game')
-
 const textResult = document.getElementById('textResult')
 const playerModels = document.createElement('div')
 const computerModels = document.createElement('div')

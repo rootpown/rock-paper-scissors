@@ -7,7 +7,6 @@
 .container { 
     background-color: var(--bg);
 }
-
 ul { 
     list-style: none;
 }
@@ -46,7 +45,6 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 10vw;
-
 }
 .block{ 
     display: flex;
@@ -58,7 +56,6 @@ ul {
     font-weight: 900;
     padding: 1rem 0;
     gap: 1rem;
-
 }
 
 .main_body_choice { 
@@ -129,7 +126,6 @@ ul {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-
 }
 .footer_row > a > img { 
     width: 30px;
@@ -153,7 +149,6 @@ ul {
 #rock:hover { 
     transform: scale(1.3);
     transition: all 0.3s;
-
 }
 
 #scissors:hover { 
@@ -211,8 +206,6 @@ ul {
     color: var(--wh_s);
     background-color: var(--bw);
     border: 3px solid var(--gr_s);
-    /* transition: all 0.3s; */
-    
 }
 #block_rock { 
     background-image: url("imgs/502-5025794_rock-paper-scissors-clipart-hd-png-download-Photoroom.png");
