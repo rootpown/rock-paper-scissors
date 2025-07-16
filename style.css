@@ -170,7 +170,7 @@ ul {
     justify-content: center;
     position: fixed;
     z-index: 100;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .model_window_style{ 
     width: 300px;
@@ -199,9 +199,20 @@ ul {
     font-size: 30px;
     font-weight: 900;
     font-family: var(--fonts);
-    background-color: transparent;
+    background-color: var(--wh_g);
     text-transform: uppercase;
-    color: var(--wh_g);
+    color: black;
+    border: 3px solid black;
+    padding: 1rem;
+    transition: all 0.3s;
+    opacity: 1;
+}
+#restart_game:hover { 
+    color: var(--wh_s);
+    background-color: var(--bw);
+    border: 3px solid var(--gr_s);
+    transition: all 0.3s;
+    
 }
 #block_rock { 
     background-image: url("imgs/502-5025794_rock-paper-scissors-clipart-hd-png-download-Photoroom.png");
