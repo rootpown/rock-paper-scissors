@@ -225,3 +225,9 @@ ul {
     width: 200px;
     height: 400px;
 }
+#textResult { 
+    text-align: center;
+    font-weight: 900;
+    padding: 2rem 0;
+    font-size: 30px;
+}
