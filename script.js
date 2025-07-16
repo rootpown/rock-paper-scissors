@@ -62,16 +62,22 @@ function getCounter(playerChoice, computerChoice) {
     ) { 
         humanScore++;
         countPlayer.textContent = humanScore;
+        countPlayer.style.color = 'black'
+        countComputer.style.color = 'black'
         textResult.textContent = ''
         console.log(humanScore, 'comp');
     } else if(playerChoice === computerChoice) { 
         console.log('Ничья');
         textResult.textContent = 'DRAW'
+        textResult.style.color = 'red'
+        countPlayer.style.color = 'red'
+        countComputer.style.color = 'red'
     } else { 
         computerScore++;
         countComputer.textContent = computerScore;
+        countComputer.style.color = 'black'
+        countPlayer.style.color = 'black'
         textResult.textContent = ''
-
         console.log(computerScore, 'comp');
     }
 }
