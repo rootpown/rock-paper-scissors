@@ -19,7 +19,8 @@ const modalRestart = document.getElementById('restart_game')
 const textResult = document.getElementById('textResult')
 const playerModels = document.createElement('div')
 const computerModels = document.createElement('div')
-
+const container = document.querySelector('.container')
+const resultStatus = document.getElementById('status_game')
 let humanScore = 0
 let computerScore = 0
 
@@ -60,11 +61,13 @@ function updateChoice(playerChoice, computerChoice) {
     }
 }
 function modalDisplay() { 
+        if(humanScore === 5) { 
+            resultStatus.textContent = 'YOU WIN!'
+        } else if (computerScore === 5) resultStatus.textContent = 'YOU LOST';
         if(humanScore === 5 || computerScore === 5) { 
             modalWindow.style.visibility = 'visible'
             modalRestart.addEventListener('click', () => resetGames())
         }
-        
 }
 function getCounter(playerChoice, computerChoice) {    
     if( playerChoice === 'PAPER' && computerChoice === "SCISSORS" ||
@@ -94,7 +97,6 @@ function getCounter(playerChoice, computerChoice) {
 }
 function resetGames() { 
     modalWindow.style.visibility = 'hidden'
-
     humanScore = 0;
     computerScore = 0;
     countPlayer.textContent = '';
